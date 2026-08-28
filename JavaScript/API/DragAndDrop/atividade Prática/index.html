@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estacione o Carro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1> ESTACIONE O CARRO</h1>
+
+    <p>
+        Arraste cada carro para a vaga da mesma cor!
+    </p>
+
+
+    
+
+    <div class="placar">
+
+        Carros estacionados:
+
+        <span id="pontos">0</span>/3
+
+    </div>
+
+
+   
+
+    <h2>Carros</h2>
+
+    <div class="carros">
+
+
+        
+
+        <div
+            id="carroAzul"
+            class="carro azul"
+            draggable="true"
+        >
+
+            <img
+                src="img/carro_azul.png"
+                alt="Carro azul"
+            >
+
+        </div>
+
+
+        
+
+        <div
+            id="carroVermelho"
+            class="carro vermelho"
+            draggable="true"
+        >
+
+            <img
+                src="img/carro_vermelho.png"
+                alt="Carro vermelho"
+            >
+
+        </div>
+
+
+       
+
+        <div
+            id="carroAmarelo"
+            class="carro amarelo"
+            draggable="true"
+        >
+
+            <img
+                src="img/carro_amarelo.png"
+                alt="Carro amarelo"
+            >
+
+        </div>
+
+    </div>
+
+
+   
+
+    <h2>Estacionamento</h2>
+
+    <div class="estacionamento">
+
+
+
+        <div
+            id="vagaAzul"
+            class="vaga azul"
+        >
+
+            <span>🅿</span>
+
+        </div>
+
+
+        
+
+        <div
+            id="vagaVermelha"
+            class="vaga vermelho"
+        >
+
+            <span>🅿</span>
+
+        </div>
+
+
+        
+
+        <div
+            id="vagaAmarela"
+            class="vaga amarelo"
+        >
+
+            <span>🅿</span>
+
+        </div>
+
+    </div>
+
+
+    
+
+    <div id="mensagem"></div>
+
+
+   
+    <button onclick="reiniciar()">
+
+         Reiniciar 
+
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
