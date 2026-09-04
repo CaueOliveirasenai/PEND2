@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #050505;
+    color: white;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.icone {
+    font-size: 55px;
+    margin-bottom: 10px;
+
+    color: #008cff;
+
+    text-shadow:
+        0 0 10px #008cff,
+        0 0 25px rgba(0, 140, 255, 0.5);
+}
+
+h1 {
+    margin: 0;
+    font-size: 42px;
+    letter-spacing: 3px;
+    font-family: "Permanent Marker" ;
+}
+
+h1 span {
+    color: #008cff;
+    font-family: "Permanent Marker";
+}
+
+header p {
+    color: #888;
+    font-size: 16px;
+}
+
+
+/* CARDS */
+
+.card {
+    background: #0d0d0d;
+
+    border: 1px solid #1d1d1d;
+    border-radius: 15px;
+
+    padding: 25px;
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 0 20px rgba(0, 140, 255, 0.08);
+}
+
+
+/* TÍTULO DOS CARDS */
+
+.titulo-card {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.icone-card {
+    font-size: 35px;
+
+    min-width: 45px;
+
+    text-align: center;
+
+    color: #008cff;
+
+    text-shadow:
+        0 0 8px #008cff;
+}
+
+.titulo-card h2 {
+    margin: 0;
+
+    color: #008cff;
+
+    font-family: "Permanent Marker";
+}
+
+.titulo-card p {
+    margin: 5px 0 0;
+
+    color: #777;
+}
+
+
+/* BOTÃO */
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #0623c8;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #008cff;
+
+    box-shadow:
+        0 0 10px #008cff,
+        0 0 25px rgba(0, 140, 255, 0.4);
+
+    transform: translateY(-2px);
+}
+
+
+/* INFORMAÇÕES DA LOCALIZAÇÃO */
+
+.informacoes {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.info {
+    background: #080808;
+
+    border: 1px solid #222;
+
+    border-radius: 8px;
+
+    padding: 15px;
+}
+
+.info strong {
+    display: block;
+
+    color: #008cff;
+
+    margin-bottom: 8px;
+}
+
+.info span {
+    color: #ccc;
+
+    word-break: break-all;
+}
+
+
+/* CÂMERA */
+
+.camera-box {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 300px;
+
+    margin-top: 20px;
+
+    background: #050505;
+
+    border: 1px solid #222;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* TEXTO DA CÂMERA */
+
+.camera-text {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: #555;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    pointer-events: none;
+}
+
+.camera-text i {
+    font-size: 40px;
+
+    color: #008cff;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 10px #008cff;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #555;
+}
+
+footer span {
+    color: #008cff;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .informacoes {
+        grid-template-columns: 1fr;
+    }
+
+    video {
+        height: 250px;
+    }
+
+}
+
