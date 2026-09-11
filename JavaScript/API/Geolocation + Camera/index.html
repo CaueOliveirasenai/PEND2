@@ -5,148 +5,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Game Tracker</title>
 
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Game Tracker</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-        rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
 
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
 </head>
 
-<!---- Game Tracker: projeto que utiliza as Web APIs de Geolocalização e Câmera do navegador.
-// O sistema obtém a localização do usuário e permite visualizar a câmera diretamente na página.  ---->
+<!--
+    Game Tracker: projeto que utiliza as Web APIs de Geolocalização e Câmera do navegador.
+    O sistema obtém a localização do usuário e permite visualizar a câmera diretamente na página.
+-->
 
 <body>
 
-    <div class="container">
 
-        <header>
+<div class="container">
 
-            
-            <div class="icone">
-                <i class="fa-solid fa-gamepad"></i>
+    <header>
+
+        <div class="icone">
+            <i class="fa-solid fa-gamepad"></i>
+        </div>
+
+        <h1>GAME <span>TRACKER</span></h1>
+
+        <p>
+            Registre sua sessão de jogo
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <!-- LOCALIZAÇÃO -->
+
+        <section class="card">
+
+            <div class="titulo-card">
+
+                <span class="icone-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                </span>
+
+                <div>
+                    <h2>Localização</h2>
+                    <p>Informações da sua localização</p>
+                </div>
+
             </div>
 
-            <h1>GAME <span>TRACKER</span></h1>
+            <button onclick="obterLocalizacao()">
+                Obter Localização
+            </button>
 
-            <p>
-                Registre sua sessão de jogo
-            </p>
+            <div class="informacoes">
 
-        </header>
+                <div class="info">
+                    <strong>Latitude</strong>
+                    <span id="latitude">--</span>
+                </div>
+
+                <div class="info">
+                    <strong>Longitude</strong>
+                    <span id="longitude">--</span>
+                </div>
+
+                <div class="info">
+                    <strong>Precisão</strong>
+                    <span id="precisao">--</span>
+                </div>
+
+            </div>
+
+        </section>
 
 
-        <main>
+        <!-- CÂMERA -->
 
-            
+        <section class="card">
 
-            <section class="card">
+            <div class="titulo-card">
 
-                <div class="titulo-card">
+                <span class="icone-card">
+                    <i class="fa-solid fa-camera"></i>
+                </span>
 
-                    
-                    <span class="icone-card">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </span>
+                <div>
+                    <h2>Câmera</h2>
+                    <p>Visualize sua câmera</p>
+                </div>
 
-                    <div>
-                        <h2>Localização</h2>
-                        <p>Informações da sua localização</p>
-                    </div>
+            </div>
+
+
+            <!-- BOTÃO PARA ABRIR A CÂMERA -->
+
+            <button onclick="abrirCamera()">
+                Abrir Câmera
+            </button>
+
+
+            <!-- ÁREA DA CÂMERA -->
+
+            <div class="camera-box">
+
+                <video id="camera" autoplay></video>
+
+                <div class="camera-text" id="cameraTexto">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    <br>
+
+                    A câmera aparecerá aqui
 
                 </div>
 
-                <button onclick="obterLocalizacao()">
-                    Obter Localização
-                </button>
+            </div>
 
-                <div class="informacoes">
-
-                    <div class="info">
-                        <strong>Latitude</strong>
-                        <span id="latitude">--</span>
-                    </div>
-
-                    <div class="info">
-                        <strong>Longitude</strong>
-                        <span id="longitude">--</span>
-                    </div>
-
-                    <div class="info">
-                        <strong>Precisão</strong>
-                        <span id="precisao">--</span>
-                    </div>
-
-                </div>
-
-            </section>
+            <button onclick="tirarFoto()">
+                Tirar Foto
+            </button>
 
 
-            <!-- CÂMERA -->
 
-            <section class="card">
+            <!-- CANVAS USADO PARA CAPTURAR A FOTO -->
 
-                <div class="titulo-card">
-
-                    <!-- Ícone de câmera -->
-                    <span class="icone-card">
-                        <i class="fa-solid fa-camera"></i>
-                    </span>
-
-                    <div>
-                        <h2>Câmera</h2>
-                        <p>Visualize sua câmera</p>
-                    </div>
-
-                </div>
-
-                <button onclick="abrirCamera()">
-                    Abrir Câmera
-                </button>
-
-                <div class="camera-box">
-
-                    <video id="camera" autoplay></video>
-
-                    <div class="camera-text" id="cameraTexto">
-
-                        <i class="fa-solid fa-camera"></i>
-
-                        <br>
-
-                        A câmera aparecerá aqui
-
-                    </div>
-
-                </div>
-
-            </section>
-
-        </main>
+            <canvas id="foto" style="display: none;"></canvas>
 
 
-        <footer>
+            <!-- FOTO CAPTURADA -->
 
-            <p>
-                GAME TRACKER <span>•</span> Web APIs
-            </p>
+            <img id="fotoCapturada" alt="Foto capturada">
 
-        </footer>
+        </section>
 
-    </div>
+    </main>
 
 
-    <script src="script.js"></script>
+    <footer>
+
+        <p>
+            GAME TRACKER <span>•</span> Web APIs
+        </p>
+
+    </footer>
+
+</div>
+
+
+<script src="script.js"></script>
+
 
 </body>
 
 </html>
-

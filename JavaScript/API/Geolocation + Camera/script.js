@@ -37,10 +37,6 @@ function obterLocalizacao() {
 }
 
 
-// ==========================
-// CÂMERA
-// ==========================
-
 function abrirCamera() {
 
     navigator.mediaDevices.getUserMedia({
@@ -67,3 +63,25 @@ function abrirCamera() {
 
 }
 
+
+function tirarFoto() {
+
+    const video = document.getElementById("camera");
+    const canvas = document.getElementById("foto");
+    const imagem = document.getElementById("fotoCapturada");
+
+    canvas.width = video.clientWidth;
+    canvas.height = video.clientHeight;
+
+    const contexto = canvas.getContext("2d");
+
+    contexto.drawImage(
+        video,
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    imagem.src = canvas.toDataURL("image/png");
+}

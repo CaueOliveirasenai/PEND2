@@ -3,6 +3,7 @@ const contexto = canvas.getContext("2d");
 
 contexto.lineWidth = 5;  // Definindo a largura da linha
 
+
 //cabeça
 contexto.beginPath();
 contexto.arc(250, 80, 30, 0, Math.PI *2 );  
