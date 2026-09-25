@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #b7dcf6;
+    color: #17324d;
+}
+
+header {
+    background: #0a386d;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 55px;
+    letter-spacing: 2px;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.pesquisa,
+.resultado,
+.grafico {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.pesquisa {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    background: #0a3c6e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d47a1;
+}
+
+.resultado {
+    text-align: center;
+}
+
+.resultado h2 {
+    color: #1565c0;
+}
+
+.temperatura {
+    font-size: 50px;
+    color: #1976d2;
+    font-weight: bold;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.info div {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.grafico h2 {
+    color: #1565c0;
+}
+
+footer {
+    background: #083467;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+@media (max-width: 600px) {
+
+    .pesquisa {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+}
