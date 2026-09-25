@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #050816;
+    color: white;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #0b1026;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #b8c0d9;
+}
+
+/* Conteúdo */
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+/* Pesquisa */
+
+.pesquisa {
+    text-align: center;
+    background-color: #10172f;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.pesquisa h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Resultado */
+
+.resultado {
+    background-color: #10172f;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.resultado h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.resultado .data {
+    color: #8fa3d9;
+    margin-bottom: 20px;
+}
+
+.resultado img {
+    width: 100%;
+    max-height: 550px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.resultado .explicacao {
+    text-align: justify;
+    line-height: 1.7;
+    color: #d5d9e8;
+}
+
+/* Link de vídeo */
+
+.resultado a {
+    display: inline-block;
+    margin: 20px;
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+/* Rodapé */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #8b93aa;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .resultado {
+        padding: 20px;
+    }
+
+}
