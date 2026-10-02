@@ -1,0 +1,14 @@
+{
+  "name": "saudacao",
+  "version": "1.0.0",
+  "description": "Projeto de saudação com Webpack",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "webpack": "^5.111.1",
+    "webpack-cli": "^7.2.3"
+  }
+}
